@@ -1,0 +1,66 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Mugs{% endblock title %}
+
+{% block main-content %}
+
+
+<div class="container my-5">
+  <div class="row">
+  
+    <!-- Sidebar -->
+    <div class="col-md-3 mb-4">
+      <div class="p-3 shadow rounded-3 bg-light">
+        <h5 class="mb-3 fw-semibold text-primary">Filters</h5>
+        <div class="list-group">
+          <a href="{% url 'mug' %}" class="list-group-item list-group-item-action active">
+            All Mugs
+          </a>
+          <a href="{% url 'mugproduct' 'Image' %}" class="list-group-item list-group-item-action">
+            Customised Photo
+          </a>
+          <a href="{% url 'mugproduct' 'Name' %}" class="list-group-item list-group-item-action">
+            Customised Name
+          </a>
+          <a href="{% url 'mugproduct' 'below' %}" class="list-group-item list-group-item-action">
+            Below ₹200
+          </a>
+          <a href="{% url 'mugproduct' 'above' %}" class="list-group-item list-group-item-action">
+            Above ₹500
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Products -->
+    <div class="col-md-9">
+      <h2 class="mb-4 fw-bold text-center text-decoration-underline">Explore Our Mugs</h2>
+      <div class="row g-4">
+        {% for product in mugs %}
+          <div class="col-sm-6 col-md-4">
+            <div class="card h-100 shadow border-0 transition-effect">
+              <a href="{% url 'product-detail' product.id %}">
+                <img src="{{ product.product_image.url }}" class="card-img-top rounded-top" alt="{{ product.title }}" style="height: 250px; object-fit: cover;">
+              </a>
+              <div class="card-body text-center">
+                <h6 class="fw-bold">{{ product.title }}</h6>
+                <p class="mb-0 text-danger fw-semibold fs-5">
+                  ₹{{ product.discounted_price }}
+                  <span class="text-muted text-decoration-line-through fs-6">₹{{ product.selling_price }}</span>
+                </p>
+              </div>
+              <div class="card-footer bg-white border-0 text-center">
+                <a href="{% url 'product-detail' product.id %}" class="btn btn-outline-primary btn-sm w-75 mt-2">View Details</a>
+              </div>
+            </div>
+          </div>
+        {% empty %}
+          <p class="text-muted text-center">No mugs found. Please check back later!</p>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock main-content %}

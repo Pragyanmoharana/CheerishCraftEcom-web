@@ -1,0 +1,143 @@
+.owl-carousel .item{
+ /* border: 1px solid black; */
+ font-size: 24px;
+ text-align: center;
+ margin-top: 20px;;
+}
+
+.owl-next{
+ float:right;
+}
+.owl-prev{
+ float:left;
+}
+.owl-prev span{
+ font-size: 24px;
+ font-weight: bold;
+}
+.owl-next span{
+ font-size: 24px;
+ font-weight: bold;
+}
+
+.testimonial-card {
+    background: linear-gradient(145deg, #000000, #1a1a3c);
+    color: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 20px;
+    min-height: 200px;
+    position: relative;
+  }
+.testimonial-card::before {
+    content: "“";
+    font-size: 80px;
+    color: #f8d7a8;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+  }
+.testimonial-author {
+    font-weight: bold;
+    margin-top: 20px;
+  }
+.testimonial-location {
+    color: #ccc;
+  }
+.quote-mark {
+    font-size: 4rem;
+    color: #f8d7a8;
+    position: absolute;
+    top: -20px;
+    left: 20px;
+  }
+
+  .info-section {
+    background-color: #c62828;
+    color: white;
+    padding: 40px 0;
+  }
+  .info-box {
+    text-align: center;
+  }
+  .info-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+  .info-title {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-size: 1rem;
+  }
+  .info-description {
+    font-size: 0.95rem;
+  }  
+  .category-box {
+    border-right: 1px solid #e0e0e0;
+    padding: 15px 20px;
+    text-align: center;
+    background-color: #fff9f2;
+    transition: background 0.3s ease;
+  }
+
+  .category-box:hover {
+    background-color: #ffe9d6;
+    cursor: pointer;
+  }
+
+  .category-icon {
+    font-size: 1.5rem;
+    margin-bottom: 10px; /* More gap */
+    color: #fd7e14;
+  }
+
+  .category-label {
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: 500;
+  }
+
+  .category-row {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .category-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    background-color: #fffaf3;
+    transition: transform 0.2s ease;
+  }
+
+  .category-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .category-img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .category-title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  .category-links a {
+    display: block;
+    color: #5a5a5a;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    text-decoration: none;
+  }
+
+  .category-links a:hover {
+    color: #fd7e14;
+  }
+  .transition-effect:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  }
